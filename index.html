@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta>
+    <title> css animation </title>
+    <style>
+    body {
+        background: lightyellow;
+    }
+    div {animation-timing-function: ease-out;}
+    #box{
+		width:25%;
+		height:200px;
+		background-color:red;
+        position: absolute;
+		top:300px;
+		-webkit-animation-name: moveBox; 2s infinite;	/* Chrome, Safari, Opera */ 
+		animation: moveBox 2s infinite;
+    }
+	#back-wheel{
+		position:absolute;
+		width:5%;
+		height:60px;
+		top:480px;
+		left:3%;
+		border-radius:100%;
+		background-color:black;
+		-webkit-animation-name: moveBack-wheel; 2s infinite;	/* Chrome, Safari, Opera */ 
+		animation: moveBack-wheel 2s infinite;
+	}
+	#front-wheel{
+		position:absolute;
+		width:5%;
+		height:60px;
+		top:480px;
+		left:22%;
+		border-radius:100%;
+		background-color:black;
+		-webkit-animation-name: moveFront-wheel; 2s infinite;	/* Chrome, Safari, Opera */ 
+		animation: moveFront-wheel 2s infinite;
+	}
+	#front{
+		position:absolute;
+		top:400px;
+		left:25%;
+		background-color:lightblue;
+		width:10%;
+		height:100px;
+		-webkit-animation-name: moveFront; 2s infinite;	/* Chrome, Safari, Opera */ 
+		animation: moveFront 2s infinite;
+	}
+		
+	@keyframes moveBox			{	from {left: -5%;}	to {left: 105%;}	}
+	@keyframes moveBack-wheel	{	from {left: -2%;}	to {left: 108%;}	}
+	@keyframes moveFront-wheel	{	from {left: 17%;}	to {left: 127%;}	}
+	@keyframes moveFront		{	from {left: 20%;}	to {left: 130%;}	}
+
+	</style>
+  </head>
+
+  <body>
+	<audio> <source src="trucks020.mp3" ></audio>
+    <div id="box"></div>
+	<div id="front"></div>
+	<div id="front-wheel"></div>
+	<div id="back-wheel"></div>
+	</body>
